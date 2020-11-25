@@ -1,0 +1,21 @@
+<div class="login">
+  <div class="section_1">
+    <form action="#" #formRef="ngForm" (ngSubmit)="handleSubmit(formRef.value)">
+      <fieldset ngModelGroup="login">
+        <div>
+          <input class="user" autocomplete="off" (blur)="blurUser()" type="text" placeholder="请输入用户名" name="user"
+            [(ngModel)]="user" #userRef="ngModel" required minlength="3">
+        </div>
+        <div *ngIf="userRef.errors?.required" [ngClass]="passRef.errors?.required ? 'ng-invalid' : ''">用户名必须输入</div>
+        <div *ngIf="userRef.errors?.minlength" [ngClass]="passRef.errors?.required ? 'ng-invalid' : ''">最少长度为3位</div>
+        <div>
+          <input class="pass" (blur)="blurPass()" type="password" placeholder="请输入密码" name="pass" [(ngModel)]="pass"
+            #passRef="ngModel" required minlength="3">
+        </div>
+        <div *ngIf="passRef.errors?.required" [ngClass]="passRef.errors?.required ? 'ng-invalid' : ''">密码必须输入</div>
+        <div *ngIf="passRef.errors?.minlength" [ngClass]="passRef.errors?.required ? 'ng-invalid' : ''">最少长度为3位</div>
+        <button type="submit">登录</button>
+      </fieldset>
+    </form>
+  </div>
+</div>

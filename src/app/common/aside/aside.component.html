@@ -1,0 +1,19 @@
+<div class="app-aside">
+  <nz-select class="select" [(ngModel)]="selectedVal"
+    [nzPlaceHolder]="'请选择'"
+    (ngModelChange)="onOptionChange($event)"
+    (nzOnSearch)="onSearch($event)"
+    appChangeColor
+
+  >
+    <nz-option nzHide nzValue="99" nzLabel="99"></nz-option>
+    <ng-container>
+      <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+      <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+      <nz-option nzValue="hzlzh" nzLabel="邹兴鸿"></nz-option>
+      <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+    </ng-container>
+  </nz-select>
+  <p>aside works!</p>
+</div>
+

@@ -1,0 +1,27 @@
+
+@import '../../common.scss';
+
+.login{
+  position: absolute;
+  top:50%; left:50%;
+  transform: translate(-50%, -50%);
+  width:50%;
+  //height:40%;
+  height:90px;
+  background: rgb(203, 224, 231);
+  .section_1{
+    padding-top:20px;
+    padding-left:20px;
+    @include border_m(2px, #ff0);
+    font-size: 36px;
+    input{
+      outline:none;
+    }
+    div.ng-valid{
+      border:3px solid #0ff;
+    }
+    div.ng-invalid{
+      border:3px solid #f00;
+    }
+  }
+}

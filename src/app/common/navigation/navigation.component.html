@@ -1,0 +1,15 @@
+<div class="app-nav" >
+  <div class="color-picker-wrap">
+    <div class="color-picker">
+      <nz-input-group class="input-group" nzSearch [nzAddOnAfter]="btn">
+        <input type="text" (focus)="handleFocus()" [value]="color" nz-input placeholder="请选择颜色" />
+        <ng-template #btn>
+          <button nz-button nzType="primary" (click)="handleSubmit()">按钮</button>
+        </ng-template>
+      </nz-input-group>
+      <div [ngClass]="showSketch ? 'showSketch' : 'hiddenSketch'">
+        <color-sketch [color]="color" (onChange)="handleChange($event)"></color-sketch>
+      </div>
+    </div>
+  </div>
+</div>

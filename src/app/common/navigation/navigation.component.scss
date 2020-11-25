@@ -1,0 +1,32 @@
+@import "../../../common.scss";
+
+.app-nav {
+  background-color: $color;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  @include border_m;
+
+  .color-picker-wrap {
+    width: 30%;
+    height: 200px;
+    position: fixed;
+    display: flex;
+  }
+
+  .color-picker {
+    width: 100%;
+  }
+
+  .input-group {
+    width: 100%;
+  }
+
+  .showSketch {
+    display: block;
+  }
+
+  .hiddenSketch {
+    display: none;
+  }
+}

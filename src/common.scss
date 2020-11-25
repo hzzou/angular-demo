@@ -1,0 +1,14 @@
+// 定义公共使用样式 mixin function等
+
+
+$baseFontSize:75px;
+$color:#ff0;
+
+
+@function px2rem($px){
+  @return $px/$baseFontSize*1rem;
+}
+
+@mixin border_m($w:1px, $c:#000) {
+  border: $w solid $c;
+}
